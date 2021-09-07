@@ -1,3 +1,10 @@
+@font-face {
+  font-family: bootsandspurs;
+  src: url(../fonts/BootsAndSpurs.ttf) format("truetype");
+}
+.special-font {
+  font-family: bootsandspurs;
+}
 header {
   background-color: #202020;
 }
@@ -7,8 +14,12 @@ footer {
   text-align: center;
 }
 header a {
-  color: white;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
+  font-size: 17px;
 }
 header li {
   display: inline-block;
@@ -28,4 +39,6 @@ header li {
   background-color: #127300;
 }
 
-/** <link href="//db.onlinewebfonts.com/c/9dc62b8077b41e8044113a572047ecc9?family=Boots+&+Spurs" rel="stylesheet" type="text/css"/>**/
+body {
+  font-family: "roboto", arial, sans-serif;
+}
