@@ -24,6 +24,10 @@ footer {
   color: #fff;
 }
 
+/* Links */
+a {
+  text-decoration: none;
+}
 header a {
   color: #fff;
 }
@@ -66,4 +70,24 @@ footer {
 
 .review__images {
   border-radius: 50%;
+}
+
+/* Contact Page */
+input,
+select,
+textarea {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+/* nav  */
+nav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+nav li {
+  display: inline-block;
+}
+.curent {
+  text-decoration: underline;
 }

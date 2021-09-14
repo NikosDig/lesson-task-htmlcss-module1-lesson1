@@ -14,12 +14,30 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="guitars.html">Guitars</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="curent">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h1>Contact</h1>
+      <form method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name">
+        <label for="email">E mail</label>
+        <input type="email" id="email" name="email">
+        <label for="guitar">Guitar</label>
+        <select name="guitar" id="guitar">
+          <option value="adirondack-red">Adirondack-red</option>
+          <option value="adirondack-blue">Adirondack-blue</option>
+          <option value="adirondack-black">Adirondack-black</option>
+          <option value="adirondack-green">Adirondack-green</option>
+        </select>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <label for="checkbox">Sign up for E mails</label>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <input type="submit" value="Send Now" class="cta">
+    </form>
     </main>
     <footer>Copyright &copy;</footer>
   </body>
