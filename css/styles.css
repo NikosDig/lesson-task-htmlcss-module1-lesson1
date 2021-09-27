@@ -71,6 +71,20 @@ footer {
   background-position-x: right;
   background-position-y: bottom;
   min-height: 70vh;
+  position: relative;
+}
+
+.welcome_heading {
+  position: absolute;
+  text-align: center;
+  left: 100px;
+  top: 100px;
+}
+
+.welcome_cta {
+  position: relative;
+  left: 130px;
+  top: 60px;
 }
 
 .selling-points__images {
