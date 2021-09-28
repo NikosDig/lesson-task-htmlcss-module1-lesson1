@@ -13,6 +13,14 @@ h2,
   font-family: "Boots And Spurs", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
 }
+header {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  margin-left: 25px;
+}
 
 .product-list h2 {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
@@ -87,12 +95,49 @@ footer {
   top: 60px;
 }
 
+.selling-points {
+  margin: 50px auto;
+}
+
+.selling-points,
+.reviews__content {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+}
+
+.selling-points > *,
+.reviews__content > * {
+  flex: 1;
+}
+
 .selling-points__images {
   border-radius: 100px;
+  width: 100%;
+}
+
+.reviews {
+  text-align: center;
+  padding: 50px;
+}
+
+.reviews__content {
+  text-align: left;
+  margin: auto;
+}
+
+.reviews__content div {
+  margin: 50px;
 }
 
 .review__images {
+  width: 80px;
   border-radius: 50%;
+  float: right;
+}
+
+.reviews__name {
+  display: block;
 }
 
 /* Contact Page */
@@ -101,6 +146,11 @@ select,
 textarea {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
+}
+
+.contact {
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* nav  */
@@ -113,4 +163,40 @@ nav li {
 }
 .curent {
   text-decoration: underline;
+}
+
+/* product spesific page */
+.product-specific {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-specific a {
+  display: block;
+  width: 100px;
+  margin: auto;
+}
+
+.product-specific__details {
+  padding: 0 30px;
+}
+
+.product-specific__prise {
+  font-size: 1.5em;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-image__thumbnails {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
 }
