@@ -16,14 +16,42 @@ h2,
 .logo {
   font-family: "Boots And Spurs", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
+  text-align: center;
 }
+
 header {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 nav {
   margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  z-index: 1000;
+  right: 0px;
+  background: #202020;
+}
+
+nav ul {
+  padding: 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 30px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
 }
 
 .product-list h2 {
@@ -49,9 +77,12 @@ header a {
   background-color: #bb0000;
   color: #fff;
   font-size: 1em;
-  padding: 10px 80px;
   border-radius: 6px;
   text-transform: uppercase;
+}
+
+.cta-large {
+  padding: 10px 40px;
 }
 
 .cta-small {
@@ -109,7 +140,7 @@ footer {
   background-image: url("../images/home-header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: center;
   background-position-y: bottom;
   min-height: 70vh;
   position: relative;
@@ -118,8 +149,10 @@ footer {
 .welcome_heading {
   position: absolute;
   text-align: center;
-  left: 100px;
   top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
 }
 
 .welcome_cta {
@@ -136,6 +169,7 @@ footer {
 .reviews__content {
   max-width: 1000px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -149,6 +183,10 @@ footer {
   width: 100%;
 }
 
+.selling-points h2 {
+  text-align: left;
+}
+
 .reviews {
   text-align: center;
   padding: 50px;
@@ -160,7 +198,7 @@ footer {
 }
 
 .reviews__content div {
-  margin: 50px;
+  margin: 20px;
 }
 
 .review__images {
@@ -175,7 +213,7 @@ footer {
 
 .featured {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   max-width: 1000px;
   margin: 50px auto;
   grid-gap: 10px;
@@ -221,13 +259,7 @@ textarea {
 }
 
 /* nav  */
-nav ul {
-  list-style-type: none;
-  padding: 0px;
-}
-nav li {
-  display: inline-block;
-}
+
 .curent {
   text-decoration: underline;
 }
@@ -236,7 +268,7 @@ nav li {
 .product-specific {
   display: flex;
   max-width: 1000px;
-  margin: 50px auto;
+  flex-direction: column;
 }
 
 .product-specific > * {
@@ -272,7 +304,7 @@ nav li {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 .products img {
@@ -283,3 +315,68 @@ nav li {
   max-width: 1000px;
   margin: auto;
 }
+
+@media (min-width: 400px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 600px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .selling-points,
+  .reviews__content {
+    flex-direction: row;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    top: 0px;
+  }
+  header label {
+    display: none;
+  }
+  nav li {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  .product-specific {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 800px) {
+  .featured {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .reviews__content div {
+    margin: 20px;
+  }
+  .welcome {
+    background-position-x: right;
+  }
+  .welcome_heading {
+    top: 100px;
+    left: 100px;
+    transform: none;
+  }
+  .cta-large {
+    padding: 10px 80px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .product-specific {
+    flex-direction: row;
+    margin: 50px auto;
+  }
+} ;
